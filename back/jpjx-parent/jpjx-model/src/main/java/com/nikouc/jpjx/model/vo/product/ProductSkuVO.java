@@ -1,7 +1,7 @@
 package com.nikouc.jpjx.model.vo.product;
 
-import com.atguigu.spzx.model.entity.base.BaseEntity;
-import com.atguigu.spzx.model.entity.product.ProductSku;
+import com.nikouc.jpjx.model.entity.base.BaseEntity;
+import com.nikouc.jpjx.model.entity.product.ProductSku;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;

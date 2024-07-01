@@ -1,6 +1,6 @@
 package com.nikouc.jpjx.model.dto.product;
 
-import com.atguigu.spzx.model.entity.base.BaseEntity;
+import com.nikouc.jpjx.model.entity.base.BaseEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 

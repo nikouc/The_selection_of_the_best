@@ -1,6 +1,6 @@
 package com.nikouc.jpjx.model.dto.h5;
 
-import com.atguigu.spzx.model.entity.order.OrderItem;
+import com.nikouc.jpjx.model.entity.order.OrderItem;
 import lombok.Data;
 
 import java.math.BigDecimal;

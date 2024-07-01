@@ -1,6 +1,6 @@
 package com.nikouc.jpjx.model.entity.system;
 
-import com.atguigu.spzx.model.entity.base.BaseEntity;
+import com.nikouc.jpjx.model.entity.base.BaseEntity;
 import lombok.Data;
 
 @Data
