@@ -45,9 +45,17 @@ public class IndexController {
 
     //用户登录
     @Operation(summary = "登录方法")
-    @PostMapping("login")
+    @PostMapping("/login")
     public Result login(@RequestBody LoginDto loginDto){
         LoginVo loginVo = sysUserService.login(loginDto);
         return  Result.build(loginVo, ResultCodeEnum.SUCCESS);
+    }
+
+    //用户退出
+    @Operation(summary = "用户退出")
+    @GetMapping("/logout")
+    public Result logout(@RequestHeader(name = "token") String token){
+        sysUserService.logout(token);
+        return Result.build(null,ResultCodeEnum.SUCCESS);
     }
 }
