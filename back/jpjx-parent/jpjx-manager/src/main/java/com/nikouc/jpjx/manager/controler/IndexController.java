@@ -1,5 +1,6 @@
 package com.nikouc.jpjx.manager.controler;
 
+import com.nikouc.common.AuthContextUtil;
 import com.nikouc.jpjx.manager.mapper.SysUserMapper;
 import com.nikouc.jpjx.manager.service.SysUserService;
 import com.nikouc.jpjx.manager.service.ValidateCodeService;
@@ -28,12 +29,9 @@ public class IndexController {
 
     //获取当前登录用户信息
     @GetMapping(value = "/getUserInfo")
-    public Result getUserInfo(@RequestHeader(name = "token") String token){
-        //1 从请求头获取token
-        //2 根据token查询redis获取用户信息
-        SysUser sysUser = sysUserService.getUserInfo(token);
-        //3 用户信息返回
-        return Result.build(sysUser,ResultCodeEnum.SUCCESS);
+    public Result getUserInfo(){
+        //通过拦截器把用户信息存进线程中，调用AuthContextUtil
+        return Result.build(AuthContextUtil.get(),ResultCodeEnum.SUCCESS);
     }
 
     //生成图片验证码
